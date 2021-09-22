@@ -59,15 +59,15 @@ const Login = ({ initialState }) => {
     <div className={style.login}>
       <div className="container">
         <form className={style.form}>
-          <h1 className={style.title}>Реєстрація</h1>
+          <h1 className={style.title}>Регистрация</h1>
           {phoneDirty && phoneError && <div style={{ color: 'red' }}>{phoneError}</div>}
           <input
             className={style.phone}
             onChange={(e) => phoneHandler(e)}
             value={phone}
             onBlur={(e) => blurHandler(e)}
-            name="phone"
-            type="tel"
+            name="mail"
+            type="mail"
             placeholder="Номер телефона..."
           />
           {passwordDirty && passwordError && <div style={{ color: 'red' }}>{passwordError}</div>}
@@ -80,7 +80,7 @@ const Login = ({ initialState }) => {
             placeholder="Пароль..."
           />
           <button disabled={!formValid} className={style.btn} type="submit">
-            Увійти
+            Войти
           </button>
         </form>
       </div>
