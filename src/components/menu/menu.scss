@@ -134,6 +134,25 @@
   }
 }
 
+.top {
+  display: grid;
+  justify-content: center;
+  .menu {
+    display: flex;
+    font-size: 14px;
+    width: 100%;
+    height: initial;
+    opacity: 1;
+    white-space: nowrap;
+
+    &__item {
+      &:last-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .menu {
     display: none;

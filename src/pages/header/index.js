@@ -59,7 +59,7 @@ export default function Header({ generalInfo, services }) {
             }
           </div>
 
-            <Link class="menu__link-btn link link--black" to="/login">
+            <Link class="menu__link-btn link" to="/login">
               <span class="link__text">Войти</span>
             </Link>
         

@@ -1,4 +1,4 @@
-@import 'mixins';
+@import './_mixins';
 
 html,
 body {
@@ -146,9 +146,8 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  background-color: #b8e959;
-  color: #fffefe;
-  border-radius: 30px;
+  background-color: grey;
+  color: #fff;
   border: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -163,7 +162,7 @@ button {
     width: 100%;
     height: 0;
     padding-bottom: 500%;
-    background-color: #acda53;
+    background-color: #000;
     z-index: 0;
     transform-origin: top;
     transform: rotate(-45deg) translate(0, -50%);
@@ -198,4 +197,40 @@ button {
 .show {
   opacity: 1;
   transition: opacity 1s;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 32px;
+  text-align: center;
+  color: black;
+  -webkit-text-stroke: 1px #000000;
+  overflow: hidden;
+  text-transform: uppercase;
+  background: linear-gradient(to left, #fff, #fff 50%, black 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 0%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  z-index: 10;
+  &:hover {
+    background-position: 100% 0%;
+  }
+
+  @include _1024 {
+    font-size: 24px;
+  }
+
+  @include _567 {
+    font-size: 20px;
+  }
+
+  @include _375 {
+    font-size: 18px;
+  }
 }

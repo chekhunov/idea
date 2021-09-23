@@ -7,8 +7,9 @@ export default function LogoCompany(props) {
     <>
       <Link to="/">
         <a>
-          <div className={"header__img"} onClick={props.setActiveId}>
-            <img className={"header__img"} src={logo} alt="logo company" />
+          <div className={"logo"} onClick={props.setActiveId}>
+            IDEA_M
+            {/* <img className={"header__img"} src={logo} alt="logo company" /> */}
           </div>
         </a>
       </Link>
