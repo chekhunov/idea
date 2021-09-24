@@ -4,7 +4,6 @@ import Menu from '../../components/menu';
 import { Link } from 'react-router-dom';
 import HeaderMenuPopup from './headerMenuPopup';
 import LogoCompany from './logoCompany';
-import getGeneralInfoVal from '../../utils/getGeneralInfoVal';
 
 const menuItems = [
   {
@@ -25,7 +24,7 @@ const menuItems = [
   }
 ];
 
-export default function Header({ generalInfo, services }) {
+export default function Header({ services }) {
   const [activeId, setActiveId] = React.useState(null);
   const [activePopup, setActivePopup] = React.useState(false);
 
@@ -72,7 +71,6 @@ export default function Header({ generalInfo, services }) {
                 menuItems={menuItems} 
                 activeId={activeId} 
                 setActiveId={setActiveId} 
-                generalInfo={generalInfo}
                 services={services}
       />
               </>

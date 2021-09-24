@@ -1,9 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import getGeneralInfoVal from '../../utils/getGeneralInfoVal';
 import { Link } from 'react-router-dom';
 
-export default function Footer({ generalInfo, services }) {
+export default function Footer({ services }) {
   return (
     <header className={classNames('footer')}>
       <div className="footer__top">
@@ -65,14 +64,14 @@ export default function Footer({ generalInfo, services }) {
 
               <ul className="footer__social">
                 <li className="footer__social-list">
-                  <a href={getGeneralInfoVal(generalInfo, 'facebook')}>
+                  <a href="#">
                     <div className="icon-facebook"></div>
                     <span>facebook</span>
                   </a>
                 </li>
 
                 <li className="footer__social-list">
-                  <a href={getGeneralInfoVal(generalInfo, 'instagram')}>
+                  <a href="#">
                     <div className="icon-instagram"></div>
                     <span>instagram</span>
                   </a>
