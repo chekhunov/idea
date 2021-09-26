@@ -71,8 +71,10 @@ const Menu = ({multiSelect = false, menuItems, activeId, setActiveId, activePopu
                     ))}
                   </ul>
               </span>
-
             </div>
+
+            <span className={"accent"}></span>
+            <span className={"accent-active"}></span>
 
             <ul className={classNames("menu__sublist-mobile", activeMenuMobile && 'active')}>
                     {services && services.map(service => (
@@ -98,6 +100,9 @@ const Menu = ({multiSelect = false, menuItems, activeId, setActiveId, activePopu
               }}>
               <span className={"menu__left"}>{item.value}</span>
             </div>
+
+            <span className={"accent"}></span>
+            <span className={"accent-active"}></span>
           </li>
         </Link>)
       ))}

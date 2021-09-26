@@ -3,49 +3,60 @@ import classNames from 'classnames'
 import Menu from '../../components/menu';
 import CardProject from '../../components/RecipeReviewCard'
 import style from './Home.module.scss';
-import bg from '../../assets/img/temp/1.jpeg'
+import bg from '../../assets/img/temp/5.jpeg'
 
 const menuItems = [
   {
     id: 0,
     value: 'Все проекты',
+    link: '#'
   },
   {
     id: 1,
     value: 'Технологии',
     isDropdown: false,
+    link: '#'
   },
   {
     id: 2,
     value: 'Бизнес',
+    link: '#'
   },
   {
     id: 3,
     value: 'Oбщество',
+    link: '#'
   },
   {
     id: 4,
     value: 'Еда',
+    link: '#'
   },
   {
     id: 5,
     value: 'Издания',
+    link: '#'
   },
   {
     id: 6,
     value: 'Фильмы и Видео',
+    link: '#'
   },
   {
     id: 7,
     value: 'Здоровье',
+    link: '#'
   },
   {
     id: 8,
     value: 'Игры',
+    link: '#'
   },
   {
     id: 9,
     value: 'Еще...',
+    isDropdown: false,
+    link: '#'
   }
 ];
 
@@ -143,6 +154,7 @@ export default function Home() {
             {cards && cards.map((item, index) => (
 
               <CardProject 
+              key = {index}
               variant="outlined"
               {...item}
               >{cards}</CardProject>)

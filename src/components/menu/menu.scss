@@ -145,9 +145,65 @@
     opacity: 1;
     white-space: nowrap;
 
+    &__left {
+      z-index: 20;
+    }
+
     &__item {
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &::before, &::after {
+        display: none;
+      }
+
       &:last-child {
         margin-right: 20px;
+      }
+
+      .accent {
+        height: 100%;
+        width: 100%;
+        background-color: grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(400%);
+        z-index: -1;
+        transition: transform 0.3s;
+      }
+
+      .accent-active {
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(400%);
+        z-index: 0;
+        transition: transform 0.3s;
+      }
+
+      &:hover {
+        color: #ffffff;
+        .accent {
+          transform: translateY(0);
+          transition: transform 0.3s;
+        }
+      }
+
+      &.active {
+        color: #ffffff;
+
+        .menu__left {
+          color: #ffffff;
+        }
+        .accent-active {
+          transform: translateY(0);
+          transition: transform 0.3s;
+        }
       }
     }
   }

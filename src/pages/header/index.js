@@ -8,12 +8,12 @@ import LogoCompany from './logoCompany';
 const menuItems = [
   {
     id: 0,
-    value: 'Как это работает',
+    value: 'Создать ПРОЕКТ',
     link: 'about',
   },
   {
     id: 1,
-    value: 'Все проекты',
+    value: 'Как это работает',
     link: '',
     isDropdown: false,
   },

@@ -1,6 +1,6 @@
 import React from 'react';
-// import Login from './pages/login'
-// import Signup from './pages/auth/signup'
+import SignUp from './pages/auth/SignUp'
+import SignIn from './pages/auth/SignIn'
 import Home from './pages/home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -13,8 +13,8 @@ function App(props) {
   return (
     <>
         <Switch>
-                {/* <Route path="/login" exact component={Login}/> */}
-                {/* <Route path="/signup" exact component={Signup} /> */}
+                <Route path="/login" exact component={SignIn} />
+                <Route path="/sign-up" exact component={SignUp} />
                 <Route path="/" exact component={Home} />
         </Switch>
       </>
